@@ -12,12 +12,19 @@
 header {
     width: 100%;
     background-color: #000000;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
+}
+
+.logotype {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    display: none;
 }
 
 .ul {
@@ -298,7 +305,7 @@ header {
 
 .text2{
     height: 46px;
-    width: 340px;
+    max-width: 340px;
     border: none;
     vertical-align: middle;
     padding-left: 20px;
@@ -409,12 +416,12 @@ input:focus {
 }
 
 .download p{
-    width: 480px;
+    max-width: 480px;
     margin: 0px auto 30px auto;
 }
 
 .links{
-    width: 405px;
+    max-width: 405px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -541,6 +548,46 @@ footer{
 
     .footermenu {
         flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 500px) {
+
+    header {
+        display: none;
+    }
+
+    .links{
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .bottom2 a {
+        margin-top: 40px;
+    }
+
+    .webdev h1 {
+        font-size: 30px;
+    }
+
+    .webdev p {
+        font-size: 13px;
+    }
+
+    .ul ul {
+        display: none;
+    }
+
+    .logotype {
+        display: block;
+    }
+
+    .webdev{
+        padding-top: 120px;
+    }
+
+    .webdev a {
+        margin-bottom: 100px;
     }
 }
 
